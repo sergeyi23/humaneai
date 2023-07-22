@@ -1,0 +1,39 @@
+type Creator @entity {
+  id: ID!
+  owner: Bytes! # address
+  reputation: Int
+  isActive: Boolean!
+  stake: BigInt!
+  timestamp: BigInt!
+}
+
+type Verifier @entity {
+  id: ID!
+  owner: Bytes! # address
+  reputation: Int!
+  isActive: Boolean!
+  stake: BigInt!
+  timestamp: BigInt!
+}
+
+type DataSetItem @entity {
+  id: ID!
+  dataSetItemId: BigInt! # uint256
+  author: Bytes! # address
+  format: Int!
+  tags: [Int!]
+  contentIpfsHash: String!
+  content: String
+  rating: Int!
+  timestamp: BigInt!
+}
+
+type DataSetItemVoted @entity(immutable: true) {
+  id: Bytes!
+  dataSetItemId: BigInt! # uint256
+  voter: Bytes! # address
+  vote: Boolean! # bool
+  blockNumber: BigInt!
+  blockTimestamp: BigInt!
+  transactionHash: Bytes!
+}

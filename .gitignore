@@ -4,3 +4,5 @@ artifacts
 typechain-types
 .idea
 dist
+.DS_Store
+build

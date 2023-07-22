@@ -1,0 +1,41 @@
+specVersion: 0.0.5
+schema:
+  file: ./schema.graphql
+dataSources:
+  - kind: ethereum
+    name: HumaneAIDataset
+    network: mumbai
+    source:
+      address: "0xB4538EceA22A24e547563963AcD711f6cC2a7642"
+      abi: HumaneAIDataset
+      startBlock: 38201962
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.7
+      language: wasm/assemblyscript
+      entities:
+        - CreatorJoined
+        - CreatorLeft
+        - DataSetItemCreated
+        - DataSetItemVoted
+        - VerifierJoined
+        - VerifierLeft
+      abis:
+        - name: HumaneAIDataset
+          file: ./abis/HumaneAIDataset.json
+      eventHandlers:
+        - event: CreatorJoined(indexed address)
+          handler: handleCreatorJoined
+        - event: CreatorLeft(indexed address)
+          handler: handleCreatorLeft
+        - event: DataSetItemCreated(indexed uint256,indexed address)
+          handler: handleDataSetItemCreated
+        - event: DataSetItemVoted(indexed uint256,indexed address,bool)
+          handler: handleDataSetItemVoted
+        - event: VerifierJoined(indexed address)
+          handler: handleVerifierJoined
+        - event: VerifierLeft(indexed address)
+          handler: handleVerifierLeft
+      file: ./src/humane-ai-dataset.ts
+features:
+  - ipfsOnEthereumContracts
