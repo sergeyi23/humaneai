@@ -13,6 +13,8 @@ import {
 } from "@chakra-ui/react"
 
 import { DataSet } from "../components/DataSet"
+import { Creators } from "../components/Creators"
+import { Verifiers } from "../components/Verifiers"
 
 export const Home = () => (
   <Box textAlign="center" fontSize="xl">
@@ -36,10 +38,10 @@ export const Home = () => (
               <DataSet />
             </TabPanel>
             <TabPanel>
-              <p>two!</p>
+              <Creators />
             </TabPanel>
             <TabPanel>
-              <p>three!</p>
+              <Verifiers />
             </TabPanel>
           </TabPanels>
         </Tabs>
