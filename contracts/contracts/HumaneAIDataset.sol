@@ -9,7 +9,7 @@ contract HumaneAIDataset {
 
   // Stake amount in wei
   // NOTE: using low value for PoC
-  uint256 constant STAKE_AMOUNT_WEI = 10000000000000000;
+  uint256 constant STAKE_AMOUNT_WEI = 1000000000000000;
 
   // Reputation rewards for content creation and verification
   int32 constant VERIFIER_REPUTATION_REWARD = 1;

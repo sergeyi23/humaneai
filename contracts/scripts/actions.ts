@@ -22,7 +22,7 @@ export async function joinAsCreator(hre: HardhatRuntimeEnvironment, signerIndex:
     const humaneAIDatasetWithSigner = await getContract(hre, signerIndex);
     
     console.log("Sending transaction");
-    const options = {value: hre.ethers.parseEther("0.01")}
+    const options = {value: hre.ethers.parseEther("0.001")}
     const txObj = await humaneAIDatasetWithSigner.joinAsCreator(options);
     console.log(`Sent transaction ${txObj.hash}`);
 
@@ -36,7 +36,7 @@ export async function joinAsVerifier(hre: HardhatRuntimeEnvironment, signerIndex
   const humaneAIDatasetWithSigner = await getContract(hre, signerIndex);
   
   console.log("Sending transaction");
-  const options = {value: hre.ethers.parseEther("0.01")}
+  const options = {value: hre.ethers.parseEther("0.001")}
   const txObj = await humaneAIDatasetWithSigner.joinAsVerifier(options);
   console.log(`Sent transaction ${txObj.hash}`);
 

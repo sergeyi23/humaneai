@@ -5,11 +5,11 @@ import {createDataSetItem, joinAsCreator, joinAsVerifier, voteDataSetItem } from
 
 //https://hardhat.org/hardhat-runner/docs/config#json-rpc-based-networks
 
-let accounts = ["17ee17a024700674cbadadcc198ba538c2b33974b5bf95eb0f11a47151eaf2eb"]
+let accounts = []
 
 const config: HardhatUserConfig = {
   solidity: "0.8.17",
-  defaultNetwork: "mumbai",
+  defaultNetwork: "gnosis",
   networks: {
     hardhat: {
     },

@@ -2,11 +2,11 @@
   "scripts": {
     "compile": "npx hardhat compile",
     "test": "npx hardhat test --network hardhat",
-    "deploy:testnet": "npx hardhat run --network mumbai scripts/deploy.ts",
-    "test:joinAsCreator": "npx hardhat --network mumbai joinAsCreator",
-    "test:joinAsVerifier": "npx hardhat --network mumbai joinAsVerifier",
-    "test:createDataSetItem": "npx hardhat --network mumbai createDataSetItem",
-    "test:voteDataSetItem": "npx hardhat --network mumbai voteDataSetItem"
+    "deploy": "npx hardhat run scripts/deploy.ts",
+    "test:joinAsCreator": "npx hardhat joinAsCreator",
+    "test:joinAsVerifier": "npx hardhat joinAsVerifier",
+    "test:createDataSetItem": "npx hardhat createDataSetItem",
+    "test:voteDataSetItem": "npx hardhat voteDataSetItem"
   },
   "devDependencies": {
     "@helia/strings": "^1.0.0",
