@@ -1,0 +1,11 @@
+{
+  "scripts": {
+    "compile": "npx hardhat compile",
+    "test": "npx hardhat test --network hardhat",
+    "deploy:testnet": "npx hardhat run --network chiado scripts/deploy.ts"
+  },
+  "devDependencies": {
+    "@nomicfoundation/hardhat-toolbox": "^3.0.0",
+    "hardhat": "^2.17.0"
+  }
+}
