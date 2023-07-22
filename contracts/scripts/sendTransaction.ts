@@ -21,7 +21,7 @@ async function joinAsCreator(signerIndex: number = 0) {
     const humaneAIDatasetWithSigner = await getContract(signerIndex);
     
     console.log("Sending transaction");
-    const options = {value: ethers.parseEther("0.1")}
+    const options = {value: ethers.parseEther("0.01")}
     const txObj = await humaneAIDatasetWithSigner.joinAsCreator(options);
     console.log(`Sent transaction ${txObj.hash}`);
 

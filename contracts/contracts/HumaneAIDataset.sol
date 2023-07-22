@@ -9,7 +9,7 @@ contract HumaneAIDataset {
 
   // Stake amount in wei
   // NOTE: using low value for PoC
-  uint256 constant STAKE_AMOUNT_WEI = 100000000000000000;
+  uint256 constant STAKE_AMOUNT_WEI = 10000000000000000;
 
   // Reputation rewards for content creation and verification
   int32 constant VERIFIER_REPUTATION_REWARD = 1;
@@ -219,6 +219,21 @@ contract HumaneAIDataset {
     item.votes.push(VerifierVote(msg.sender, vote, block.timestamp));
 
     emit DataSetItemVoted(id, msg.sender, vote);
+  }
+
+  function getCreator(address creatorAddress) public view returns (Creator memory) {
+    Creator memory result = creators[creatorAddress];
+    return result;
+  }
+
+  function getVerifier(address verifierAddress) public view returns (Verifier memory) {
+    Verifier memory result = verifiers[verifierAddress];
+    return result;
+  }
+
+  function getDataSetItem(uint256 id) public view returns (DatasetItem memory) {
+    DatasetItem memory result = datasetItems[id];
+    return result;
   }
 
   modifier onlyActiveCreator {
