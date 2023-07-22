@@ -100,6 +100,7 @@ contract HumaneAIDataset {
     require(msg.value == STAKE_AMOUNT_WEI, "Wrong stake amount");
 
     Creator storage creator = creators[creatorAddress];
+    creator.owner = creatorAddress;
     creator.stake = msg.value;
     creator.isActive = true;
     creator.timestamp = block.timestamp;
@@ -121,6 +122,7 @@ contract HumaneAIDataset {
     require(msg.value == STAKE_AMOUNT_WEI, "Wrong stake amount");
 
     Verifier storage verifier = verifiers[verifierAddress];
+    verifier.owner = verifierAddress;
     verifier.stake = msg.value;
     verifier.isActive = true;
     verifier.timestamp = block.timestamp;
