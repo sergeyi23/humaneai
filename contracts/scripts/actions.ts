@@ -2,7 +2,7 @@ import ipfsCLient from 'ipfs-http-client';
 
 import { HardhatRuntimeEnvironment } from "hardhat/types";
 
-const CONTRACT_ADDRESS = "0xB4538EceA22A24e547563963AcD711f6cC2a7642";
+const CONTRACT_ADDRESS = "0xc277F05665C570CC413AA584fcDb05CbF542678E";
 
 async function getContract(hre: HardhatRuntimeEnvironment, signerIndex: number = 0): Promise<any> {
   console.log("Preparing signer")

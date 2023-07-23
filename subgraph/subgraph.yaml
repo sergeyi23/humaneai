@@ -4,11 +4,11 @@ schema:
 dataSources:
   - kind: ethereum
     name: HumaneAIDataset
-    network: mumbai
+    network: gnosis
     source:
-      address: "0xB4538EceA22A24e547563963AcD711f6cC2a7642"
+      address: "0xc277F05665C570CC413AA584fcDb05CbF542678E"
       abi: HumaneAIDataset
-      startBlock: 38201962
+      startBlock: 29091271
     mapping:
       kind: ethereum/events
       apiVersion: 0.0.7

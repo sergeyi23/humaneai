@@ -1,7 +1,7 @@
 import { ApolloClient, gql, InMemoryCache } from '@apollo/client';
 
 const client = new ApolloClient({
-    uri: "https://api.thegraph.com/subgraphs/name/sergeyi23/humane-ai-dev",
+    uri: "https://api.thegraph.com/subgraphs/name/sergeyi23/humane-ai",
     cache: new InMemoryCache(),
   });
 
@@ -12,6 +12,8 @@ const client = new ApolloClient({
         contentIpfsHash
         author
         rating
+        format
+        tags
     }
   }`;
 

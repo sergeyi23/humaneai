@@ -1,4 +1,5 @@
 import {
+    Badge,
     TableContainer,
     Table,
     TableCaption,
@@ -18,6 +19,8 @@ import {
     contentIpfsHash: string;
     rating: number;
     author: string;
+    format: number;
+    tags: number[];
   }
   
   export const DataSet = () => {
@@ -43,6 +46,8 @@ import {
                 <Tr>
                     <Th>ID</Th>
                     <Th>Content</Th>
+                    <Th>Format</Th>
+                    <Th>Tags</Th>
                     <Th isNumeric>Rating</Th>
                     <Th>Author</Th>
                 </Tr>
@@ -52,6 +57,8 @@ import {
                     <Tr key={dataItem.id}>
                         <Th>{dataItem.id}</Th>
                         <Th><Link href={"https://ipfs.io/ipfs/" + dataItem.contentIpfsHash} target="_blank">{dataItem.contentIpfsHash}</Link></Th>
+                        <Th>{dataItem.format === 0 ?  "Text" : "Q&A"}</Th>
+                        <Th><Badge>{dataItem.tags.map((tag) => tag === 0 ? "Statement" : tag === 1 ? "Question" : "Verified Knowledge")}</Badge></Th>
                         <Th isNumeric>{dataItem.rating}</Th>
                         <Th>{dataItem.author}</Th>
                     </Tr>

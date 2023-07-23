@@ -28,7 +28,7 @@ export const Home = () => (
           </VStack>
         </Heading>
         <Text>
-          Crowsourced dataset powering future AGI for humanity
+          Crowdsourced dataset powering future AGI for humanity
         </Text>
         <Tabs align='center' variant='soft-rounded'>
           <TabList>

@@ -1,6 +1,6 @@
 # Humane AI
 
-Humane AI is crowsourced dataset powering future AGI for humanity.
+Humane AI is crowdsourced dataset powering future AGI for humanity.
 
 ## Why?
 
@@ -39,6 +39,7 @@ Some of the TODO features:
 
 ## Techstack:
 - Smart contract on Gnosis chain
+- Content for data set items is stored on Filecoin/IPFS
 - Subgraph on The Graph
 - Web Interface
 
