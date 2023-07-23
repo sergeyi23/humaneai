@@ -32,9 +32,9 @@ const config: HardhatUserConfig = {
 
 task("joinAsCreator", "Task to join as creator")
   .addPositionalParam("signerIndex")
-  .setAction(async (taskArgs) => {
+  .setAction(async (taskArgs, hre) => {
     console.log("Running task joinAsCreator");
-    await joinAsCreator(taskArgs.signerIndex);
+    await joinAsCreator(hre, taskArgs.signerIndex);
   });
 
 task("joinAsVerifier", "Task to join as creator")
