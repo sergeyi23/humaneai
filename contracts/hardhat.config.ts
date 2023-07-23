@@ -5,7 +5,7 @@ import {createDataSetItem, joinAsCreator, joinAsVerifier, voteDataSetItem } from
 
 //https://hardhat.org/hardhat-runner/docs/config#json-rpc-based-networks
 
-let accounts = []
+let accounts = [""]
 
 const config: HardhatUserConfig = {
   solidity: "0.8.17",

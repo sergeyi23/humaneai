@@ -51,7 +51,7 @@ import {
                 {dataSetItems.map(dataItem => (
                     <Tr key={dataItem.id}>
                         <Th>{dataItem.id}</Th>
-                        <Th><Link href="https://ipfs.io/ipfs/{dataItem.contentIpfsHash}" target="_blank">{dataItem.contentIpfsHash}</Link></Th>
+                        <Th><Link href={"https://ipfs.io/ipfs/" + dataItem.contentIpfsHash} target="_blank">{dataItem.contentIpfsHash}</Link></Th>
                         <Th isNumeric>{dataItem.rating}</Th>
                         <Th>{dataItem.author}</Th>
                     </Tr>

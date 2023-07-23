@@ -1,6 +1,7 @@
 import {
   Box,
   Heading,
+  Image,
   Tab,
   Tabs,
   TabPanel,
@@ -21,7 +22,10 @@ export const Home = () => (
     <Grid minH="100vh" p={3}>
       <VStack spacing={8}>
         <Heading size="2xl">
-          Humane AI
+          <VStack>
+            <Image src="logo192.png" ></Image> 
+            <Text>Humane AI</Text>
+          </VStack>
         </Heading>
         <Text>
           Crowsourced dataset powering future AGI for humanity
@@ -47,12 +51,11 @@ export const Home = () => (
         </Tabs>
         <Link
           color="teal.500"
-          href="https://chakra-ui.com"
-          fontSize="2xl"
+          href="https://github.com/sergeyi23/humaneai"
           target="_blank"
           rel="noopener noreferrer"
         >
-          Learn Chakra
+          GitHub repository
         </Link>
       </VStack>
     </Grid>
