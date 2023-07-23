@@ -39,7 +39,7 @@ export const Verifiers = () => {
       :
       <TableContainer>
           <Table variant='simple'>
-              <TableCaption>Data set indexed by <Link href="https://thegraph.com/hosted-service/subgraph/sergeyi23/humane-ai-dev" target="_blank">subgraph</Link> on The Graph network. <Link>Download as csv</Link></TableCaption>
+              <TableCaption>Data set indexed by <Link href="https://thegraph.com/hosted-service/subgraph/sergeyi23/humane-ai" target="_blank">subgraph</Link> on The Graph network. <Link>Download as csv</Link></TableCaption>
               <Thead>
               <Tr>
                   <Th>ID</Th>
