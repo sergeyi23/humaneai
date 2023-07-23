@@ -49,14 +49,18 @@ export const Home = () => (
             </TabPanel>
           </TabPanels>
         </Tabs>
+        <Text>
+          In order to interact with dApp use HardHat tasks in this repository:
+        </Text>
         <Link
           color="teal.500"
-          href="https://github.com/sergeyi23/humaneai"
+          href="https://github.com/sergeyi23/humaneai/contracts"
           target="_blank"
           rel="noopener noreferrer"
         >
           GitHub repository
         </Link>
+        
       </VStack>
     </Grid>
   </Box>
